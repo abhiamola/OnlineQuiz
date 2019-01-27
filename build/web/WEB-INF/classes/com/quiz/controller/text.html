@@ -1,0 +1,42 @@
+package com.quiz.controller;
+
+import java.io.IOException;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class HomeController extends HttpServlet {
+
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
+        RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/jsp/index.jsp");
+        rd.forward(request, response);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
+        doGet(request, response);
+    }
+}
+
+
+        PrintWriter out=response.getWriter();
+  Question q=new Question();
+  q.setQues(request.getParameter("question"));
+  q.setA(request.getParameter("a"));
+  q.setB(request.getParameter("b"));
+  q.setC(request.getParameter("c"));
+  q.setD(request.getParameter("d"));
+  q.setSubject(request.getParameter("subject"));
+  q.setAnswer(request.getParameter("answer"));
+  Quizbo bo=new Quizbo();
+  if(bo.addQuestion(q))
+  {
+    out.print("Question Succesfully Added");
+  }
+  else
+  {
+      out.print("Question Cannot be Added");
+  }

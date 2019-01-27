@@ -1,0 +1,447 @@
+-- MySQL Administrator dump 1.4
+--
+-- ------------------------------------------------------
+-- Server version	5.1.73-community
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+
+--
+-- Create schema onlinequiz
+--
+
+CREATE DATABASE IF NOT EXISTS onlinequiz;
+USE onlinequiz;
+
+--
+-- Definition of table `admin`
+--
+
+DROP TABLE IF EXISTS `admin`;
+CREATE TABLE `admin` (
+  `user` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  PRIMARY KEY (`user`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admin`
+--
+
+/*!40000 ALTER TABLE `admin` DISABLE KEYS */;
+INSERT INTO `admin` (`user`,`password`) VALUES 
+ ('Abhishekamola@gmail.com','*0EA6C143C860874A03AE271D633D8CE47068D80B');
+/*!40000 ALTER TABLE `admin` ENABLE KEYS */;
+
+
+--
+-- Definition of table `cbnst`
+--
+
+DROP TABLE IF EXISTS `cbnst`;
+CREATE TABLE `cbnst` (
+  `ques_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `ques_text` varchar(2500) NOT NULL,
+  `ques_a` varchar(500) NOT NULL,
+  `ques_b` varchar(500) NOT NULL,
+  `ques_c` varchar(500) NOT NULL,
+  `ques_d` varchar(500) NOT NULL,
+  `answer` varchar(45) NOT NULL,
+  PRIMARY KEY (`ques_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `cbnst`
+--
+
+/*!40000 ALTER TABLE `cbnst` DISABLE KEYS */;
+INSERT INTO `cbnst` (`ques_id`,`ques_text`,`ques_a`,`ques_b`,`ques_c`,`ques_d`,`answer`) VALUES 
+ (1,'To  perform a chi square test','Data conform to a normal Distribution','Data be measured on a nominal scale','Each Cell has equal','All ','B'),
+ (2,'Order of Convergence of Requla Farsi Method IS','321','618','231','312','B'),
+ (3,'Jacobi\'s Method is Also Known As','Displacement Method','Simultaneous Displacement Method','Simultaneous Mehod','Diagonal Method','C'),
+ (5,'sjlfsjklf','slkjfskjl','sdklfskjl','slkfsjklfskjl','sfkljslkjfsklfskjlfsjlkf','B'),
+ (7,'what is this you are talking about','what','is ','this','i dont know','A'),
+ (8,'Whatis happening here','notig','is ha','happening','here','A'),
+ (9,'nbbnbnnm','nmnm','mb','mnm','nmnm','A'),
+ (10,'pc program counter is also called','instruction pointer','memory pointer','data counter','file printer','C');
+/*!40000 ALTER TABLE `cbnst` ENABLE KEYS */;
+
+
+--
+-- Definition of table `computernetworks`
+--
+
+DROP TABLE IF EXISTS `computernetworks`;
+CREATE TABLE `computernetworks` (
+  `ques_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `ques_text` varchar(2500) NOT NULL,
+  `ques_a` varchar(45) NOT NULL,
+  `ques_b` varchar(45) NOT NULL,
+  `ques_c` varchar(45) NOT NULL,
+  `ques_d` varchar(45) NOT NULL,
+  `answer` varchar(45) NOT NULL,
+  PRIMARY KEY (`ques_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `computernetworks`
+--
+
+/*!40000 ALTER TABLE `computernetworks` DISABLE KEYS */;
+INSERT INTO `computernetworks` (`ques_id`,`ques_text`,`ques_a`,`ques_b`,`ques_c`,`ques_d`,`answer`) VALUES 
+ (1,'lets do some fun','wow','beuty','marvellous','excellent','A'),
+ (2,'lets do some fun','wow','beuty','marvellous','excellent','B'),
+ (3,'lets do some fun','wow','beuty','marvellous','excellent','C'),
+ (4,'lets do some fun','wow','beuty','marvellous','excellent','D'),
+ (6,'lets try this one','yeah','whynot','abcose','wonder','C'),
+ (7,'sflkjslkjfklfkjls','sjklfskjlf','slkjfs[fsmfsn',',sklfsd','slkjfskjfkl','A'),
+ (8,'that is good','what is good','I said','tha','is good','C');
+/*!40000 ALTER TABLE `computernetworks` ENABLE KEYS */;
+
+
+--
+-- Definition of table `computerorganisation`
+--
+
+DROP TABLE IF EXISTS `computerorganisation`;
+CREATE TABLE `computerorganisation` (
+  `ques_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `ques_text` varchar(2000) NOT NULL,
+  `ques_a` varchar(500) NOT NULL,
+  `ques_b` varchar(500) NOT NULL,
+  `ques_c` varchar(500) NOT NULL,
+  `ques_d` varchar(500) NOT NULL,
+  `answer` varchar(45) NOT NULL,
+  PRIMARY KEY (`ques_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `computerorganisation`
+--
+
+/*!40000 ALTER TABLE `computerorganisation` DISABLE KEYS */;
+INSERT INTO `computerorganisation` (`ques_id`,`ques_text`,`ques_a`,`ques_b`,`ques_c`,`ques_d`,`answer`) VALUES 
+ (1,'A collection of lines that connects several devices is called','bus','peripheral connection wires','both a and b','internal wires','A'),
+ (2,'A complete microcomputer system consist of','microprocessor','memory','peripheral equipment','all of the above','B'),
+ (3,'PC Program Counter is also called','instruction pointer','memory pointer','data counter','file pointer','C'),
+ (4,'In a single byte how many bits will be there?','8','16','4','32','D');
+/*!40000 ALTER TABLE `computerorganisation` ENABLE KEYS */;
+
+
+--
+-- Definition of table `databasemanagementsystem`
+--
+
+DROP TABLE IF EXISTS `databasemanagementsystem`;
+CREATE TABLE `databasemanagementsystem` (
+  `ques_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `ques_text` varchar(2000) NOT NULL,
+  `ques_a` varchar(1000) NOT NULL,
+  `ques_b` varchar(1000) NOT NULL,
+  `ques_c` varchar(1000) NOT NULL,
+  `ques_d` varchar(1000) NOT NULL,
+  `answer` varchar(1000) NOT NULL,
+  PRIMARY KEY (`ques_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `databasemanagementsystem`
+--
+
+/*!40000 ALTER TABLE `databasemanagementsystem` DISABLE KEYS */;
+/*!40000 ALTER TABLE `databasemanagementsystem` ENABLE KEYS */;
+
+
+--
+-- Definition of table `datastructure`
+--
+
+DROP TABLE IF EXISTS `datastructure`;
+CREATE TABLE `datastructure` (
+  `ques_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `ques_text` varchar(2000) NOT NULL,
+  `ques_a` varchar(500) NOT NULL,
+  `ques_b` varchar(500) NOT NULL,
+  `ques_c` varchar(500) NOT NULL,
+  `ques_d` varchar(500) NOT NULL,
+  `answer` varchar(45) NOT NULL,
+  PRIMARY KEY (`ques_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `datastructure`
+--
+
+/*!40000 ALTER TABLE `datastructure` DISABLE KEYS */;
+INSERT INTO `datastructure` (`ques_id`,`ques_text`,`ques_a`,`ques_b`,`ques_c`,`ques_d`,`answer`) VALUES 
+ (1,'Minimum number of spanning tree in a connected graph is','n','nn-1','-1','0','A'),
+ (2,'A pivot element to partition unsorted list is used in','merge sort','quick sort','selection ','bubble','B'),
+ (3,'node.next -> node.next.next; will make','node.next inaccesible','this node inaccesible','node.next.next inaccesible','none of the above','C'),
+ (4,'A circular linked list can be used for','stakc','queue','both stack and queue','none of the above','D'),
+ (5,'lets do it now','what ','are','you ','about','D');
+/*!40000 ALTER TABLE `datastructure` ENABLE KEYS */;
+
+
+--
+-- Definition of table `digitalsystemdesign`
+--
+
+DROP TABLE IF EXISTS `digitalsystemdesign`;
+CREATE TABLE `digitalsystemdesign` (
+  `ques_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `ques_text` varchar(2000) NOT NULL,
+  `ques_a` varchar(500) NOT NULL,
+  `ques_b` varchar(500) NOT NULL,
+  `ques_c` varchar(500) NOT NULL,
+  `ques_d` varchar(500) NOT NULL,
+  `answer` varchar(500) NOT NULL,
+  PRIMARY KEY (`ques_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `digitalsystemdesign`
+--
+
+/*!40000 ALTER TABLE `digitalsystemdesign` DISABLE KEYS */;
+INSERT INTO `digitalsystemdesign` (`ques_id`,`ques_text`,`ques_a`,`ques_b`,`ques_c`,`ques_d`,`answer`) VALUES 
+ (1,'Which of the following memories uses one transistor and one capacitor as basic memory unit','sram','dram','both','none','A'),
+ (2,'Which number system has a base of 16  ','Decimal','Octal',' Hexadecimal',' None','B'),
+ (3,'How many entries will be in the truth table of a 3 input NAND gate','3','6','8','9','C'),
+ (4,'How many bits are required to store one BCD digit ','1','2','3','4','D'),
+ (5,'now add this to','LET','STRY','IT','OUT','B'),
+ (6,'lets try once more','ok','lets','give','it','C');
+/*!40000 ALTER TABLE `digitalsystemdesign` ENABLE KEYS */;
+
+
+--
+-- Definition of table `discretemathematics`
+--
+
+DROP TABLE IF EXISTS `discretemathematics`;
+CREATE TABLE `discretemathematics` (
+  `ques_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `ques_text` varchar(2000) NOT NULL,
+  `ques_a` varchar(500) NOT NULL,
+  `ques_b` varchar(500) NOT NULL,
+  `ques_c` varchar(500) NOT NULL,
+  `ques_d` varchar(500) NOT NULL,
+  `answer` varchar(45) NOT NULL,
+  PRIMARY KEY (`ques_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `discretemathematics`
+--
+
+/*!40000 ALTER TABLE `discretemathematics` DISABLE KEYS */;
+INSERT INTO `discretemathematics` (`ques_id`,`ques_text`,`ques_a`,`ques_b`,`ques_c`,`ques_d`,`answer`) VALUES 
+ (1,'A _______ is an ordered collection of objects.','relation','function','set','proposition','C'),
+ (2,'Power set of empty set has exactly _____ subset.','one','two','zero','three','A'),
+ (3,'What is the cardinality of the set of odd positive integers less than 10','10','5','3','20','B'),
+ (4,'What is the Cardinality of the Power set of the set {0, 1, 2}','8','6','7','9','A'),
+ (5,'what is happening','nothing is happening','why not','i dont','know','A');
+/*!40000 ALTER TABLE `discretemathematics` ENABLE KEYS */;
+
+
+--
+-- Definition of table `java`
+--
+
+DROP TABLE IF EXISTS `java`;
+CREATE TABLE `java` (
+  `ques_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `ques_text` varchar(2000) NOT NULL,
+  `ques_a` varchar(500) NOT NULL,
+  `ques_b` varchar(500) NOT NULL,
+  `ques_c` varchar(500) NOT NULL,
+  `ques_d` varchar(500) NOT NULL,
+  `answer` varchar(45) NOT NULL,
+  PRIMARY KEY (`ques_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `java`
+--
+
+/*!40000 ALTER TABLE `java` DISABLE KEYS */;
+INSERT INTO `java` (`ques_id`,`ques_text`,`ques_a`,`ques_b`,`ques_c`,`ques_d`,`answer`) VALUES 
+ (1,'Method overloading meansMultiple methods with same name same argumentsb) Multiple methods with same name different argumentsc) Multiple methods with different name different arguments','Multiple methods with same name same arguments','Multiple methods with same name different arguments',' Multiple methods with different name different arguments','all of the above','A'),
+ (2,'Which is incorrect statement regarding overloading','Method with same name and differ in number of arguments','Methods should be with same name and different return type','Methods should be same name and differ in order of type of arguments',' Methods should be with same name and differ in type of arguments','B'),
+ (3,'Method overloading also known as?','Dynamic polymorphism','Static polymorphism','both','none of the above','C'),
+ (4,'Can we overload main method?','yes','no','both','none','D');
+/*!40000 ALTER TABLE `java` ENABLE KEYS */;
+
+
+--
+-- Definition of table `linuxadministrationandshellprogramming`
+--
+
+DROP TABLE IF EXISTS `linuxadministrationandshellprogramming`;
+CREATE TABLE `linuxadministrationandshellprogramming` (
+  `ques_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `ques_text` varchar(2000) NOT NULL,
+  `ques_a` varchar(500) NOT NULL,
+  `ques_b` varchar(500) NOT NULL,
+  `ques_c` varchar(500) NOT NULL,
+  `ques_d` varchar(500) NOT NULL,
+  `answer` varchar(500) NOT NULL,
+  PRIMARY KEY (`ques_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `linuxadministrationandshellprogramming`
+--
+
+/*!40000 ALTER TABLE `linuxadministrationandshellprogramming` DISABLE KEYS */;
+/*!40000 ALTER TABLE `linuxadministrationandshellprogramming` ENABLE KEYS */;
+
+
+--
+-- Definition of table `operatingsystem`
+--
+
+DROP TABLE IF EXISTS `operatingsystem`;
+CREATE TABLE `operatingsystem` (
+  `ques_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `ques_text` varchar(2000) NOT NULL,
+  `ques_a` varchar(500) NOT NULL,
+  `ques_b` varchar(500) NOT NULL,
+  `ques_c` varchar(500) NOT NULL,
+  `ques_d` varchar(500) NOT NULL,
+  `answer` varchar(500) NOT NULL,
+  PRIMARY KEY (`ques_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `operatingsystem`
+--
+
+/*!40000 ALTER TABLE `operatingsystem` DISABLE KEYS */;
+/*!40000 ALTER TABLE `operatingsystem` ENABLE KEYS */;
+
+
+--
+-- Definition of table `semsub`
+--
+
+DROP TABLE IF EXISTS `semsub`;
+CREATE TABLE `semsub` (
+  `subject` varchar(100) NOT NULL,
+  `branch` varchar(45) NOT NULL,
+  `sem` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`subject`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `semsub`
+--
+
+/*!40000 ALTER TABLE `semsub` DISABLE KEYS */;
+INSERT INTO `semsub` (`subject`,`branch`,`sem`) VALUES 
+ ('CBNST','cse',3),
+ ('Computer Networks','cse',4),
+ ('Computer Organisation','cse',3),
+ ('Data Structure','cse',3),
+ ('Database Management System','cse',4),
+ ('Digital System Design','cse',3),
+ ('Discrete Mathematics','cse',3),
+ ('Java','cse',3),
+ ('Linux Administration and Shell Programming','cse',4),
+ ('Operating System','cse',4),
+ ('Theory Of Computation','cse',4),
+ ('Web Technology','cse',4);
+/*!40000 ALTER TABLE `semsub` ENABLE KEYS */;
+
+
+--
+-- Definition of table `theoryofcomputation`
+--
+
+DROP TABLE IF EXISTS `theoryofcomputation`;
+CREATE TABLE `theoryofcomputation` (
+  `ques_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `ques_text` varchar(2000) NOT NULL,
+  `ques_a` varchar(500) NOT NULL,
+  `ques_b` varchar(500) NOT NULL,
+  `ques_c` varchar(500) NOT NULL,
+  `ques_d` varchar(500) NOT NULL,
+  `answer` varchar(500) NOT NULL,
+  PRIMARY KEY (`ques_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `theoryofcomputation`
+--
+
+/*!40000 ALTER TABLE `theoryofcomputation` DISABLE KEYS */;
+/*!40000 ALTER TABLE `theoryofcomputation` ENABLE KEYS */;
+
+
+--
+-- Definition of table `userlogin`
+--
+
+DROP TABLE IF EXISTS `userlogin`;
+CREATE TABLE `userlogin` (
+  `userid` int(10) unsigned NOT NULL,
+  `password` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`userid`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `userlogin`
+--
+
+/*!40000 ALTER TABLE `userlogin` DISABLE KEYS */;
+INSERT INTO `userlogin` (`userid`,`password`) VALUES 
+ (1401021135,'*0EA6C143C860874A03AE271D633D8CE47068D80B'),
+ (1401021137,'*5817D44C1F1B3EA9CB6D3F8D3DF2F7B82CB6E372'),
+ (1401021138,'*78E70256786150F3591BC29026099B381F8364F4'),
+ (1401021144,NULL),
+ (1401021156,'*5817D44C1F1B3EA9CB6D3F8D3DF2F7B82CB6E372'),
+ (1401021157,'*5817D44C1F1B3EA9CB6D3F8D3DF2F7B82CB6E372'),
+ (1401021199,'*78E70256786150F3591BC29026099B381F8364F4');
+/*!40000 ALTER TABLE `userlogin` ENABLE KEYS */;
+
+
+--
+-- Definition of table `webtechnology`
+--
+
+DROP TABLE IF EXISTS `webtechnology`;
+CREATE TABLE `webtechnology` (
+  `ques_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `ques_text` varchar(2000) NOT NULL,
+  `ques_a` varchar(500) NOT NULL,
+  `ques_b` varchar(500) NOT NULL,
+  `ques_c` varchar(500) NOT NULL,
+  `ques_d` varchar(500) NOT NULL,
+  `answer` varchar(45) NOT NULL,
+  PRIMARY KEY (`ques_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `webtechnology`
+--
+
+/*!40000 ALTER TABLE `webtechnology` DISABLE KEYS */;
+/*!40000 ALTER TABLE `webtechnology` ENABLE KEYS */;
+
+
+
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
